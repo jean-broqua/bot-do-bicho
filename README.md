@@ -9,6 +9,8 @@
 > regional basis using the daily state lottery draw, by mobsters known
 > as bicheiros or banqueiros ("bankers").
 
+❗ **_This bot is made for entertainment purpose only and don't take part on any illegal activity._**
+
 ## 🐔 How to setup
 
 This project uses **discord.js v13**, witch require **Node.js 16.6.0** or newer.
