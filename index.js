@@ -5,6 +5,8 @@ import config from './config.js';
 import dbSync from './data/sync.js';
 
 dotenv.config();
+
+// Call the function to sync or create tables.
 dbSync();
 
 const clientOptions = { intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] };

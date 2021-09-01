@@ -1,5 +1,6 @@
 import { user, aposta, sorteio } from './tables.js';
 
+// 
 async function dbSync() {
     try {
         const userResult = await user.sync();
