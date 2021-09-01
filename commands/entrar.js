@@ -5,6 +5,7 @@
 
 import { user } from '../data/tables.js'
 import config from '../config.js'
+import { signup } from '../embeds.js'
 
 export default async (client, message, args) => {
     // Add user to the user table if it not exists
@@ -17,9 +18,9 @@ export default async (client, message, args) => {
 
     if (created) {
         // Send embed saying user was created
-        console.log(newUser);
+        message.reply({ embeds: [signup] });
+
     } else {
         // Send message saying usar was not created
-        console.log('User Not Created');
     }
 }
