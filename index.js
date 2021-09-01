@@ -2,8 +2,10 @@ import DiscordJS, { Intents } from 'discord.js';
 import fs from 'fs';
 import dotenv from 'dotenv';
 import config from './config.js';
+import dbSync from './data/sync.js';
 
 dotenv.config();
+dbSync();
 
 const clientOptions = { intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] };
 const client = new DiscordJS.Client(clientOptions);
