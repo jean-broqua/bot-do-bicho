@@ -3,6 +3,8 @@ import fs from 'fs';
 import dotenv from 'dotenv';
 import config from './config.js';
 import dbSync from './data/sync.js';
+import { scheduleJob } from 'node-schedule';
+import { drawNumber } from './events/draw.js'
 
 dotenv.config();
 
@@ -45,6 +47,10 @@ client.on('messageCreate', message => {
 
     // Run the command
     cmd.default(client, message, args);
+})
+
+scheduleJob(`0 0 ${config.drawTime} * * *`, () => {
+    drawNumber(client);
 })
 
 client.login(config.token);

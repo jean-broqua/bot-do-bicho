@@ -1,5 +1,6 @@
 import database from "./database.js";
 import Sequelize from "sequelize";
+import { animals } from "../embeds.js";
 
 const user = database.define('user', {
     id: {
@@ -8,7 +9,7 @@ const user = database.define('user', {
         allowNull: false
     },
     wallet: {
-        type: Sequelize.DOUBLE,
+        type: Sequelize.INTEGER,
         defaultValue: 0
     }
 })
@@ -25,6 +26,10 @@ const aposta = database.define('aposta', {
     },
     amount: {
         type: Sequelize.DOUBLE,
+        allowNull: false
+    },
+    animal: {
+        type: Sequelize.STRING,
         allowNull: false
     }
 })

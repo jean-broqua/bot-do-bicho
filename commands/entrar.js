@@ -1,7 +1,4 @@
-// Command to include use on database in order to be able to play.
-
-// - Check if user id is in the database
-// - Add user into user table and give start credit
+// Command to include user on database in order to be able to play.
 
 import { user } from '../data/tables.js'
 import config from '../config.js'
